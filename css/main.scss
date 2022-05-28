@@ -14,6 +14,7 @@ header {
   --text: #f4f4f4;
   --text-inverse: #333;
   --background: transparent;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -24,6 +25,8 @@ header {
   align-items: center;
   padding: 2em 3em;
   transition: background 250ms ease-in;
+  background: var(--background);
+  color: var(--text);
 }
 
 .nav__list {
@@ -43,6 +46,14 @@ header {
   font-size: 0.9rem;
 }
 
+.nav-scrolled {
+  --text: #333;
+  --text-inverse: #f4f4f4;
+  --background: #f4f4f4;
+
+  box-shadow: 0 3px 20px rgba(black, 0.2);
+}
+
 .home-intro {
   padding: 50vh 0;
   background: #123;
@@ -54,7 +65,7 @@ header {
 .home-about {
   padding: 4em 0;
   max-width: 900px;
-  margin-left: 1.5em;
+  margin-left: 4em;
 }
 
 .columns {
@@ -62,6 +73,35 @@ header {
   display: flex;
 }
 
-.col {
+.col + .col {
   margin-left: 1.5em;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.more-stuff-grid {
+  background: #f4f4f4;
+  padding: 4em 0;
+  display: grid;
+  grid-gap: 2em;
+  align-items: center;
+  grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(
+      1em,
+      1fr
+    );
+}
+
+.from-left {
+  grid-column: 2 / 3;
+}
+
+.from-right {
+  grid-column: 3 / 4;
 }

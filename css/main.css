@@ -31,6 +31,8 @@ header {
   padding: 2em 3em;
   -webkit-transition: background 250ms ease-in;
   transition: background 250ms ease-in;
+  background: var(--background);
+  color: var(--text);
 }
 
 .nav__list {
@@ -52,6 +54,14 @@ header {
   font-size: 0.9rem;
 }
 
+.nav-scrolled {
+  --text: #333;
+  --text-inverse: #f4f4f4;
+  --background: #f4f4f4;
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+
 .home-intro {
   padding: 50vh 0;
   background: #123;
@@ -63,7 +73,7 @@ header {
 .home-about {
   padding: 4em 0;
   max-width: 900px;
-  margin-left: 1.5em;
+  margin-left: 4em;
 }
 
 .columns {
@@ -73,7 +83,42 @@ header {
   display: flex;
 }
 
-.col {
+.col + .col {
   margin-left: 1.5em;
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-transition: opacity 250ms ease-in;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.more-stuff-grid {
+  background: #f4f4f4;
+  padding: 4em 0;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: minmax(1em, 1fr) (minmax(200px, 400px))[2] minmax(1em, 1fr);
+      grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(1em, 1fr);
+}
+
+.from-left {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.from-right {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
 }
 /*# sourceMappingURL=main.css.map */
