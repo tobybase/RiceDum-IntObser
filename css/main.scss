@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 .site-logo {
@@ -107,8 +108,22 @@ header {
 
 .from-left {
   grid-column: 2 / 3;
+  transform: translateX(-50%);
 }
 
 .from-right {
   grid-column: 3 / 4;
+  transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear {
+  transform: translateX(0);
+  opacity: 1;
 }
