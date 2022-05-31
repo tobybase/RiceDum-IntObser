@@ -33,7 +33,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2em 3em;
+  padding: 10px 3em;
   -webkit-transition: background 250ms ease-in;
   transition: background 250ms ease-in;
   background: var(--background);
@@ -83,10 +83,6 @@ header .nav__link:after {
 header .nav__link:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
-}
-
-header .nav__link:hover::after .active {
-  border-bottom: 1px solid #ef0808;
 }
 
 .nav-scrolled {
