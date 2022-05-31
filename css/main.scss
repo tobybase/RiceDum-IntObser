@@ -42,11 +42,31 @@ header {
     padding: 15px;
     display: inline-block;
     position: relative;
+    letter-spacing: 2px;
     font-size: 1.2rem;
 
     a {
       text-decoration: none;
       color: var(--text);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: var(--spacing);
+      right: var(--spacing);
+      height: 2px;
+      background: currentColor;
+      transform: scaleX(0);
+      transition: transform 150ms ease-in-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      .active {
+        border-bottom: 1px solid rgb(239, 8, 8);
+      }
     }
   }
 }
@@ -104,6 +124,12 @@ header {
       1em,
       1fr
     );
+  h3 {
+    display: grid;
+    grid-column: span 1;
+    justify-content: center;
+    margin-bottom: 0;
+  }
 }
 
 .from-left {

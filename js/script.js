@@ -1,5 +1,7 @@
 const header = document.querySelector('header');
 const sectionOne = document.querySelector('.home-intro');
+// const link = document.querySelectorAll('nav a');
+// const target = document.querySelectorAll('main h3');
 
 const faders = document.querySelectorAll('.fade-in');
 const sliders = document.querySelectorAll('.slide-in');

@@ -51,12 +51,38 @@ header .nav__link {
   padding: 15px;
   display: inline-block;
   position: relative;
+  letter-spacing: 2px;
   font-size: 1.2rem;
 }
 
 header .nav__link a {
   text-decoration: none;
   color: var(--text);
+}
+
+header .nav__link:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: var(--spacing);
+  right: var(--spacing);
+  height: 2px;
+  background: currentColor;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  transition: -webkit-transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+
+header .nav__link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+header .nav__link:hover::after .active {
+  border-bottom: 1px solid #ef0808;
 }
 
 .nav-scrolled {
@@ -120,6 +146,16 @@ header .nav__link a {
           align-items: center;
   -ms-grid-columns: minmax(1em, 1fr) (minmax(200px, 400px))[2] minmax(1em, 1fr);
       grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(1em, 1fr);
+}
+
+.more-stuff-grid h3 {
+  display: -ms-grid;
+  display: grid;
+  grid-column: span 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0;
 }
 
 .from-left {

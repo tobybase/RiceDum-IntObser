@@ -16,20 +16,19 @@
       <a href="#" class="site-logo" aria-label="homepage">包粽</a>
       <nav class="main__nav">
         <ul class="nav__list">
-          <li class="nav__link"><a href="#">首頁</a></li>
-          <li class="nav__link"><a href="#">關於我們</a></li>
-          <li class="nav__link"><a href="#">產品</a></li>
-          <li class="nav__link"><a href="#">聯絡方式</a></li>
+          <li class="nav__link"><a href="#home-intro">首頁</a></li>
+          <li class="nav__link"><a href="#home-about">關於我們</a></li>
+          <li class="nav__link"><a href="#home-more-stuff">產品</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="home-intro">
-        <h2>用❤️欣❤️包個粽</h2>
+      <section class="home-intro" id="home-intro">
+        <h3>用❤️欣❤️包個粽</h3>
       </section>
 
-      <div class="home-about">
+      <section class="home-about" id="home-about">
         <h3>關於我們</h3>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
         <div class="columns">
@@ -55,9 +54,12 @@
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="home-more-stuff">
+      <section class="home-more-stuff" id="home-more-stuff">
+        <div class="more-stuff-grid">
+          <h3>產品</h3>
+        </div>
         <div class="more-stuff-grid">
           <img
             src="https://unsplash.it/400"
@@ -134,7 +136,7 @@
             class="slide-in from-right"
           />
         </div>
-      </div>
+      </section>
     </main>
     <script src="js/script.js"></script>
   </body>
